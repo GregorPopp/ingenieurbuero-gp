@@ -1,0 +1,426 @@
+
+<!DOCTYPE html>
+
+<html lang="de">
+<head><link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&amp;display=swap" rel="stylesheet"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ingenieurbüro Max Mustermann</title>
+<style>
+        html { scroll-behavior: smooth; }
+        :root {
+            --text-color: #fff;
+            --primary-color: #999;
+            --secondary-color: #888;
+            --border-color: #444;
+            --paper-color: #2a2a2a;
+            --shadow-color: rgba(255, 255, 255, 0.02);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Roboto", sans-serif;
+            background-color: #2a2a2a;
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: auto;
+            background-color: var(--paper-color);
+            border: 1px solid var(--border-color);
+            padding: 40px;
+            box-shadow: 0 0 15px var(--shadow-color);
+        }
+
+header {
+    text-align: center;
+    margin-bottom: 0;
+    position: sticky;
+    top: 0;
+    z-index: 1100;
+    background: var(--paper-color);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 2px 8px var(--shadow-color);
+    height: 64px; /* Set a fixed height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+        header h1 {
+            font-size: 2rem;
+            color: #fff;
+        }
+
+        header h2 {
+            font-size: 1.2rem;
+            font-weight: normal;
+            opacity: 0.7;
+        }
+
+nav {
+    margin: 0 0 20px 0;
+    text-align: center;
+    position: sticky;
+    top: 64px; /* Must match header height */
+    z-index: 1000;
+    background: var(--paper-color);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+        nav a {
+            color: var(--primary-color);
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            margin-bottom: 80px;
+        }
+
+        h3 {
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #777;
+            border-top: 1px solid var(--border-color);
+            padding-top: 20px;
+        }
+
+        .language-switcher {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background: var(--paper-color);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            box-shadow: 0 2px 8px var(--shadow-color);
+            padding: 4px 8px;
+            z-index: 2000;
+            text-align: right;
+            margin-bottom: 0;
+        }
+
+        .language-switcher button {
+            background: none;
+            border: 1px solid var(--border-color);
+            color: #fff;
+            padding: 2px 8px;
+            cursor: pointer;
+            margin-left: 4px;
+            font-size: 0.95rem;
+            border-radius: 4px;
+        }
+
+        .language-switcher button.active {
+            background-color: #555;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            header h1 {
+                font-size: 1.5rem;
+            }
+        }
+
+        .section-box {
+            padding: 60px 30px;
+            border-radius: 4px;
+            margin-bottom: 500px;
+            scroll-margin-top: 110px;
+        }
+
+        .section-box.even {
+            background-color: #2f2f2f;
+        }
+
+        .section-box.odd {
+            background-color: #242424;
+        }
+
+        #impressum, #datenschutz {
+    scroll-margin-top: 110px;
+}
+    </style>
+</head>
+<body>
+<div class="container">
+<header>
+<h1 id="title-de">Ingenieurbüro Max Mustermann</h1>
+<h1 id="title-en" style="display:none;">Engineering Office Max Mustermann</h1>
+</header>
+<nav style="margin: 1px 0; text-align: center;">
+<div><a href="#aboutme-section" id="nav-a-de">Über mich</a><a href="#aboutme-section" id="nav-a-en" style="display:none;">Portfolio</a><a href="#kompetenzen-section" id="nav-b-de">Kompetenzen</a><a href="#kompetenzen-section" id="nav-b-en" style="display:none;">Skills</a><a href="#c">C</a><a href="#d">D</a><a href="#e">E</a><a href="#f">F</a><a href="#g">G</a><a href="#h">H</a><a href="#i">I</a><a href="#j">J</a></div>
+<div style="margin-top: 1px;">
+    <a href="#impressum" id="nav-impressum-de">Impressum</a>
+    <a href="#impressum" id="nav-impressum-en" style="display:none;">Legal Disclosure</a>
+    <a href="#datenschutz" id="nav-datenschutz-de">Datenschutz</a>
+    <a href="#datenschutz" id="nav-datenschutz-en" style="display:none;">Privacy Policy</a>
+</div>
+</nav>
+<section class="section-box even" id="aboutme-section">
+<h3 id="heading-portfolio-de">Über mich</h3>
+<h3 id="heading-portfolio-en" style="display:none;">About Me</h3>
+<div style="text-align:center; margin: 20px 0;">
+<img alt="Beispielbild zur Illustration" src="beispielbild_thesis.png" style="max-width:100%; height:auto; border:1px solid #555; border-radius:4px;"/>
+</div>
+<div id="content-portfolio-de">
+<p>Hallo! Mein Name ist Max Mustermann und ich bin leidenschaftlicher Ingenieur mit Schwerpunkt auf Embedded Systems und Softwareentwicklung. Mit über 10 Jahren Berufserfahrung unterstütze ich Unternehmen bei der Entwicklung innovativer, zuverlässiger und effizienter technischer Lösungen.</p>
+<ul>
+<li>Dipl.-Ing. Elektrotechnik, TU Musterstadt</li>
+<li>10+ Jahre Erfahrung in Embedded-Entwicklung (C, C++, FreeRTOS, STM32, CAN, uvm.)</li>
+<li>Projektleitung, Systemarchitektur und Prototyping</li>
+<li>Branchen: Automotive, Industrie, Medizintechnik</li>
+<li>Kommunikativ, lösungsorientiert, zuverlässig</li>
+</ul>
+<p>Ich freue mich auf spannende Projekte und neue Herausforderungen!</p>
+</div>
+<div id="content-portfolio-en" style="display:none;">
+<p>Hello! My name is Max Mustermann and I am a passionate engineer specializing in embedded systems and software development. With over 10 years of professional experience, I support companies in developing innovative, reliable, and efficient technical solutions.</p>
+<ul>
+<li>Dipl.-Ing. Electrical Engineering, TU Musterstadt</li>
+<li>10+ years of experience in embedded development (C, C++, FreeRTOS, STM32, CAN, etc.)</li>
+<li>Project management, system architecture, and prototyping</li>
+<li>Industries: Automotive, Industrial, Medical Technology</li>
+<li>Communicative, solution-oriented, reliable</li>
+</ul>
+<p>I look forward to exciting projects and new challenges!</p>
+</div>
+</section>
+<section class="section-box odd" id="kompetenzen-section">
+<h3 id="heading-b-de">Kompetenzen</h3>
+<h3 id="heading-b-en" style="display:none;">Skills</h3>
+<div id="content-b-de">
+<p>Hier finden Sie einen Überblick über meine wichtigsten Kompetenzen:</p>
+<ul>
+<li>Embedded Softwareentwicklung (C, C++, FreeRTOS, STM32, CAN)</li>
+<li>Systemarchitektur und Hardware-nahe Programmierung</li>
+<li>Projektmanagement und agile Methoden</li>
+<li>Erfahrung in Automotive, Industrie und Medizintechnik</li>
+<li>Teamfähigkeit, analytisches Denken, Zuverlässigkeit</li>
+</ul>
+</div>
+<div id="content-b-en" style="display:none;">
+<p>Here you will find an overview of my key skills:</p>
+<ul>
+<li>Embedded software development (C, C++, FreeRTOS, STM32, CAN)</li>
+<li>System architecture and low-level programming</li>
+<li>Project management and agile methodologies</li>
+<li>Experience in automotive, industrial, and medical technology</li>
+<li>Teamwork, analytical thinking, reliability</li>
+</ul>
+</div>
+</section>
+<section class="section-box even" id="c">
+<h3 id="heading-c-de">C</h3>
+<h3 id="heading-c-en" style="display:none;">C</h3>
+<div id="content-c-de">
+<p>Dies ist der Inhalt des Abschnitts C.</p>
+</div>
+<div id="content-c-en" style="display:none;">
+<p>This is the content of section C.</p>
+</div>
+</section>
+<section class="section-box odd" id="d">
+<h3 id="heading-d-de">D</h3>
+<h3 id="heading-d-en" style="display:none;">D</h3>
+<div id="content-d-de">
+<p>Dies ist der Inhalt des Abschnitts D.</p>
+</div>
+<div id="content-d-en" style="display:none;">
+<p>This is the content of section D.</p>
+</div>
+</section>
+<section class="section-box even" id="e">
+<h3 id="heading-e-de">E</h3>
+<h3 id="heading-e-en" style="display:none;">E</h3>
+<div id="content-e-de">
+<p>Dies ist der Inhalt des Abschnitts E.</p>
+</div>
+<div id="content-e-en" style="display:none;">
+<p>This is the content of section E.</p>
+</div>
+</section>
+<section class="section-box odd" id="f">
+<h3 id="heading-f-de">F</h3>
+<h3 id="heading-f-en" style="display:none;">F</h3>
+<div id="content-f-de">
+<p>Dies ist der Inhalt des Abschnitts F.</p>
+</div>
+<div id="content-f-en" style="display:none;">
+<p>This is the content of section F.</p>
+</div>
+</section>
+<section class="section-box even" id="g">
+<h3 id="heading-g-de">G</h3>
+<h3 id="heading-g-en" style="display:none;">G</h3>
+<div id="content-g-de">
+<p>Dies ist der Inhalt des Abschnitts G.</p>
+</div>
+<div id="content-g-en" style="display:none;">
+<p>This is the content of section G.</p>
+</div>
+</section>
+<section class="section-box odd" id="h">
+<h3 id="heading-h-de">H</h3>
+<h3 id="heading-h-en" style="display:none;">H</h3>
+<div id="content-h-de">
+<p>Dies ist der Inhalt des Abschnitts H.</p>
+</div>
+<div id="content-h-en" style="display:none;">
+<p>This is the content of section H.</p>
+</div>
+</section>
+<section class="section-box even" id="i">
+<h3 id="heading-i-de">I</h3>
+<h3 id="heading-i-en" style="display:none;">I</h3>
+<div id="content-i-de">
+<p>Dies ist der Inhalt des Abschnitts I.</p>
+</div>
+<div id="content-i-en" style="display:none;">
+<p>This is the content of section I.</p>
+</div>
+</section>
+<section class="section-box odd" id="j">
+<h3 id="heading-j-de">J</h3>
+<h3 id="heading-j-en" style="display:none;">J</h3>
+<div id="content-j-de">
+<p>Dies ist der Inhalt des Abschnitts J.</p>
+</div>
+<div id="content-j-en" style="display:none;">
+<p>This is the content of section J.</p>
+</div>
+</section><hr style="border: none; height: 2px; background: #555; margin: 400px auto 180px auto; width: 80%;"/>
+<section id="impressum">
+<h3 id="impressum-title-de">Impressum</h3>
+<h3 id="impressum-title-en" style="display:none;">Legal Disclosure</h3>
+<div id="impressum-content-de">
+<p><strong>Angaben gemäß § 5 TMG:</strong><br/>
+  Max Mustermann<br/>
+  Ingenieurbüro Max Mustermann<br/>
+  Musterstraße 123<br/>
+  12345 Musterstadt<br/>
+  Deutschland</p>
+<p><strong>Kontakt:</strong><br/>
+  Telefon: +49 (0) 123 4567890<br/>
+  E-Mail: max@mustermann.de</p>
+<p><strong>Umsatzsteuer-ID:</strong><br/>
+  Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz:<br/>
+  DE123456789</p>
+<p><strong>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</strong><br/>
+  Max Mustermann<br/>
+  Adresse wie oben</p>
+</div>
+<div id="impressum-content-en" style="display:none;">
+<p><strong>Information according to § 5 TMG:</strong><br/>
+  Max Mustermann<br/>
+  Max Mustermann Engineering Office<br/>
+  Musterstraße 123<br/>
+  12345 Musterstadt<br/>
+  Germany</p>
+<p><strong>Contact:</strong><br/>
+  Phone: +49 (0) 123 4567890<br/>
+  Email: max@mustermann.de</p>
+<p><strong>VAT ID:</strong><br/>
+  Value Added Tax Identification Number according to § 27a of the German Value Added Tax Act:<br/>
+  DE123456789</p>
+<p><strong>Responsible for the content according to § 55 Abs. 2 RStV:</strong><br/>
+  Max Mustermann<br/>
+  Address as above</p>
+</div>
+</section>
+<section id="datenschutz"><hr style="border: none; height: 2px; background: #555; margin: 200px auto 180px auto; width: 80%;"/>
+<h3 id="datenschutz-title-de">Datenschutzerklärung</h3>
+<h3 id="datenschutz-title-en" style="display:none;">Privacy Policy</h3>
+<div id="datenschutz-content-de">
+<p>Wir freuen uns über Ihr Interesse an unserer Website. Der Schutz Ihrer Privatsphäre ist für uns sehr wichtig. Nachstehend informieren wir Sie ausführlich über den Umgang mit Ihren Daten gemäß der Datenschutz-Grundverordnung (DSGVO).</p>
+<p><strong>1. Verantwortlicher</strong><br/>
+    Max Mustermann<br/>
+    Ingenieurbüro Max Mustermann<br/>
+    Musterstraße 123<br/>
+    12345 Musterstadt<br/>
+    E-Mail: max@example.com</p>
+<p><strong>2. Erhebung und Verarbeitung personenbezogener Daten</strong><br/>
+    Es werden nur solche personenbezogenen Daten verarbeitet, die Sie uns freiwillig mitteilen (z.&#8197;B. per E-Mail). Es erfolgt keine Weitergabe an Dritte ohne Ihre ausdrückliche Einwilligung.</p>
+<p><strong>3. Ihre Rechte</strong><br/>
+    Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung sowie auf Datenübertragbarkeit und Widerspruch. Bitte wenden Sie sich hierzu an die oben genannte Kontaktadresse.</p>
+<p><strong>4. Server-Log-Files</strong><br/>
+    Beim Besuch dieser Website werden automatisch Informationen in sogenannten Server-Log-Files gespeichert, die Ihr Browser automatisch übermittelt. Diese Daten sind nicht bestimmten Personen zuzuordnen.</p>
+<p><strong>5. Cookies</strong><br/>
+    Unsere Website verwendet keine Cookies.</p>
+<p><strong>6. Kontaktaufnahme</strong><br/>
+    Wenn Sie uns per E-Mail kontaktieren, werden Ihre Angaben zwecks Bearbeitung der Anfrage sowie für mögliche Anschlussfragen gespeichert.</p>
+</div>
+<div id="datenschutz-content-en" style="display:none;">
+<p>Thank you for your interest in our website. The protection of your privacy is very important to us. Below, we inform you in detail about the handling of your data in accordance with the General Data Protection Regulation (GDPR).</p>
+<p><strong>1. Controller</strong><br/>
+    Max Mustermann<br/>
+    Max Mustermann Engineering Office<br/>
+    Musterstraße 123<br/>
+    12345 Musterstadt<br/>
+    Email: max@example.com</p>
+<p><strong>2. Collection and Processing of Personal Data</strong><br/>
+    Only personal data that you voluntarily provide to us (e.g., by email) will be processed. No data will be passed on to third parties without your express consent.</p>
+<p><strong>3. Your Rights</strong><br/>
+    You have the right to information, rectification, erasure, restriction of processing, data portability, and objection. Please contact the above address for this purpose.</p>
+<p><strong>4. Server Log Files</strong><br/>
+    When visiting this website, information is automatically stored in so-called server log files, which your browser automatically transmits. This data cannot be assigned to specific persons.</p>
+<p><strong>5. Cookies</strong><br/>
+    Our website does not use cookies.</p>
+<p><strong>6. Contacting Us</strong><br/>
+    If you contact us by email, your details will be stored for the purpose of processing the inquiry and for possible follow-up questions.</p>
+</div>
+</section>
+<footer>
+<p id="copyright-de">© 2025 Gregor Popp</p>
+<p id="copyright-en" style="display:none;">© 2025 Gregor Popp</p>
+</footer>
+<div class="language-switcher">
+<button class="active" onclick="switchLanguage('de')">DE</button>
+<button onclick="switchLanguage('en')">EN</button>
+</div>
+</div>
+<script>
+        function switchLanguage(lang) {
+            // Toggle visibility for elements with -de and -en IDs (main content, headings, titles)
+            const deElements = document.querySelectorAll('[id$="-de"]');
+            const enElements = document.querySelectorAll('[id$="-en"]');
+
+            deElements.forEach(el => el.style.display = lang === 'de' ? '' : 'none');
+            enElements.forEach(el => el.style.display = lang === 'en' ? '' : 'none');
+
+            // Toggle active class for language switcher buttons
+            const buttons = document.querySelectorAll(".language-switcher button");
+            buttons.forEach(btn => btn.classList.remove("active"));
+            document.querySelector(".language-switcher button:nth-child(" + (lang === 'de' ? 1 : 2) + ")").classList.add("active");
+        }
+        // Initialize language on page load (e.g., set to German by default)
+        document.addEventListener('DOMContentLoaded', () => switchLanguage('de'));
+    </script>
+</body>
+</html>
